@@ -1,0 +1,1084 @@
+
+
+
+  body {
+   overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Стилизация Header с использованием Flexbox */
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+        }
+
+        /* Блоки в шапке */
+        .block img {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .block2 p,
+        .block3 p,
+        .block6 p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .block6 p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .block4 {
+            display: flex;
+            gap: 10px;
+        }
+
+        .block4 img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .block7 button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .block7 button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Навигация и меню */
+        nav {
+            width: 100%;
+            background-color: red;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+            margin-top: 10px;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            gap: 20px;
+        }
+
+        .menu > li {
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .menu > li > a.link {
+            padding: 0 65px;
+            font-weight: 500;
+            color: white;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .menu > li > a.link:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        /* Выпадающее подменю первого уровня */
+        .sub-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+            background: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.3s, visibility 0.3s;
+            z-index: 100;
+            min-width: 400px;
+            padding: 20px;
+        }
+
+        .menu > li:hover .sub-menu {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Второй уровень меню */
+        .has-submenu-lvl2 {
+            position: relative;
+        }
+
+        .sub-menu-lvl2 {
+            position: absolute;
+            top: 0;
+            bottom:100%;
+            visibility: hidden;
+            opacity: 0;
+            background: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: opacity 0.3s, visibility 0.3s;
+            min-width: 200px;
+            padding: 15px;
+            z-index: 101;
+        }
+
+        .has-submenu-lvl2:hover > .sub-menu-lvl2 {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Стилизация ссылок в меню */
+        .sub-menu ul li {
+            margin-bottom: 10px;
+        }
+
+        .sub-menu ul li a {
+            padding: 8px 0;
+            display: block;
+            font-size: 14px;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .sub-menu ul li a:hover {
+            color: #007bff;
+        }
+
+        .has-submenu-lvl2 > a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Добавляем стрелку для пунктов с подменю */
+        .has-submenu-lvl2 > a::after {
+            content: "›";
+            margin-left: 10px;
+            font-size: 18px;
+        }
+
+
+
+
+.element {
+     width: 100%;
+    height: 100vh; /* Изменили на 100vh для лучшего отображения */
+    background: url('./orig.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    text-align: center;
+    padding-top: 50px; /* Добавили отступ сверху */
+    position: relative;
+  
+    
+    
+  
+}
+
+
+
+
+
+
+
+.element p span,
+.element p strong {
+    display: block;
+}
+
+/* Специфические стили для каждой строки */
+.element p span:first-child {
+   
+    /* Добавлено для выделения */
+    font-size: 40px; /* Настройте размер по желанию */
+    font-family: Times New Roman;
+}
+
+.element p strong {
+    color: #00FF00;
+    font-size: 48px; /* Настройте размер по желанию */
+}
+
+.element p span:last-child {
+    color: #0000FF;
+    font-size: 36px; /* Настройте размер по желанию */
+}
+ 
+
+.wrapper {
+ width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+     position: relative;
+    top: -500px;
+    flex-wrap: nowrap;
+    padding:  0 20px;
+    box-sizing: border-box;
+    
+    
+    
+  
+}
+
+
+.payment-info,
+.payment-info1,
+.payment-info2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 45px;
+     padding-left: 400px;
+    position: relative; /* Чтобы дочерний блок отталкивался от границ контейнера */
+
+
+
+
+
+    min-width: 300px; /* Минимальная ширина каждого блока */
+    max-width: 300px; /* Максимальная ширина */
+    flex-shrink: 0; /* Запрещаем сжиматься */
+    white-space: nowrap; /* Запрещаем перенос текста внутри */
+    position: static;
+    transform: none;
+    left: auto;
+    bottom: auto;
+    margin:0 ;
+    transform: translateX(30px);
+}
+
+    .payment-icon {
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+        padding-right:-40px;
+    }
+
+    .payment-text {
+        font-size: 16px;
+        font-weight: 500;
+        color: #12b7b7;
+        margin: 0;
+        line-height: 1.4;
+        font-size: 40px;
+
+
+
+    }
+
+
+
+    
+ 
+
+     .block8 button {
+            padding: 20px 80px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 680px 700px 0px 0px;
+            text-transform: uppercase;
+        }
+           .block9 button {
+            padding: 20px 80px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin: 100px 0px 0px 0px;
+            text-transform: uppercase;
+        }
+         .buttons-container {
+            display: flex;
+            gap: 30px;
+            margin-top: 100px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        /* Стили для кнопок */
+        .buttons-container button {
+            padding: 20px 50px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            min-width: 250px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .buttons-container button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Альтернативный стиль для второй кнопки */
+        .buttons-container button:nth-child(2) {
+            background-color: #28a745;
+        }
+
+        .buttons-container button:nth-child(2):hover {
+            background-color: #218838;
+        }
+
+        .buttons-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px; /* Уменьшили отступ сверху */
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.container h1{
+   text-align: center;
+   text-transform: uppercase;
+}
+
+.Frame {
+    width: 300px;
+    height: 240px;
+    
+    background-image: url('//m-files.cdn1.cc/lpfile/7/9/3/79375542fd2255331a7f11e84a510471/-/crop/138x99x475x356/-/resize/317/-/quality/100/f.png');
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    
+    /* Внутренняя рамка с отступом 10px от краев */
+    box-shadow: 
+        inset 0 0 0 10px rgba(255, 255, 255), /* Красная полупрозрачная рамка */
+        inset 0 0 0 12px rgba(0, 0, 255, 0.3); /* Синяя рамка внутри */
+    
+    /* Внешняя рамка (опционально) */
+    border: 2px solid #333;
+
+
+    /* Центрирование и отступы */
+    margin: 20px auto;
+    display: flex;
+
+}
+
+
+
+    
+
+
+.Frame2 {
+    width: 300px;
+    height: 240px;
+    
+    background-image: url('//m-files.cdn1.cc/lpfile/7/9/3/79375542fd2255331a7f11e84a510471/-/crop/138x99x475x356/-/resize/317/-/quality/100/f.png');
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    
+    /* Внутренняя рамка с отступом 10px от краев */
+    box-shadow: 
+        inset 0 0 0 10px rgba(255, 255, 255), /* Красная полупрозрачная рамка */
+        inset 0 0 0 12px rgba(0, 0, 255, 0.3); /* Синяя рамка внутри */
+    
+    /* Внешняя рамка (опционально) */
+    border: 2px solid #333;
+
+
+     margin: 20px auto;
+    display: flex;
+    
+
+}
+
+
+
+
+
+
+
+
+.Frame3  {
+    width: 300px;
+    height: 240px;
+    
+    background-image: url('//m-files.cdn1.cc/lpfile/7/9/3/79375542fd2255331a7f11e84a510471/-/crop/138x99x475x356/-/resize/317/-/quality/100/f.png');
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    
+    /* Внутренняя рамка с отступом 10px от краев */
+    box-shadow: 
+        inset 0 0 0 10px rgba(255, 255, 255), /* Красная полупрозрачная рамка */
+        inset 0 0 0 12px rgba(0, 0, 255, 0.3); /* Синяя рамка внутри */
+    
+    /* Внешняя рамка (опционально) */
+    border: 2px solid #333;
+     margin: 20px auto;
+    display: flex;
+
+}
+
+
+
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+   
+    margin-right: 200px;
+    margin-top: 20px;
+     white-space: nowrap;
+}
+
+/* Общий стиль для подписей */
+.image-caption {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    padding: 10px 0;
+    width: 100%;
+    margin-left: 20px;
+}
+
+/* Удалите старый ::after псевдоэлемент */
+.Frame::after {
+    content: none;
+}
+
+
+.wrapper1 {
+
+    height: 80vh;
+}
+ 
+.arrowone1 {
+    width: 100px;
+    height: 100px;
+    position: fixed; /* Чтобы была видна при скролле */
+    bottom: -100px; /* Начинает ниже экрана */
+    left: calc(50% - 50px);
+    animation: arrowDown 3s infinite ease-in-out;
+    z-index: 1000;
+    opacity: 0;
+}
+
+
+@keyframes arrowDown {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    20% {
+        bottom: 50px; /* Появляется */
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        bottom: 50px; /* Задерживается */
+        opacity: 1;
+    }
+    100% {
+        bottom: -100px; /* Исчезает */
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}  
+
+  .Helicopter_Shop{
+     background-image: url('https://avatars.mds.yandex.net/i?id=e491251ece32cf2289788c1a3f7c061b_l-16110296-images-thumbs&n=13');
+
+    background-size: cover; /* или contain */
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 150vh;
+     
+      transform: translateY(-700px);
+      text-transform: uppercase;
+      color: #f4f4f4;
+      
+      position: relative; /* Ключевое свойство */
+  display: inline-block;
+
+
+      
+    
+      
+      
+  }
+
+
+  .image-text {
+  position: absolute; /* Текст позиционируется относительно контейнера */
+  top: 60px; /* Отступ от нижнего края */
+  left: 60px; /* Отступ от левого края */
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Тень для лучшей читаемости */
+  /* Можно использовать top, right для других углов */
+}
+
+      .image-text{
+            /* Явно указываем одну колонку */
+            column-count: 1;
+            
+            /* Или можно использовать короткую запись */
+            columns: 1;
+            
+            /* Дополнительные стили для лучшей читаемости */
+            max-width: 700px;
+            margin: 20px auto;
+            line-height: 1.7;
+            padding: 15px;
+            font-size: 17px;
+            white-space: pre-line;
+      }
+
+  .track {
+   
+     background-image: url('https://avatars.mds.yandex.net/i?id=963025520db2fa6ef64d17bf8c9edf32_l-5712428-images-thumbs&n=13');
+   background-size: cover; /* или contain */
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 150vh;
+    transform: translateY(-760px);
+     
+   
+  }
+
+
+
+  
+  .image1, .image2, .image3, .image4 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: 50px;
+}
+
+ 
+
+.image-caption1 {
+	
+    transform: translateX(-900%);
+    transform: translateY(40%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #8e2828;
+    padding: 40px 0;
+    padding-inline: 10px;
+    width: 50%;
+    display: block;
+    white-space: nowrap;      /* Запрещает перенос текста */
+      /* Добавляет многоточие в конце */
+      margin-left: -120px;
+
+
+
+}
+
+
+
+
+  
+  
+     
+
+
+
+  .image1 {
+            background-image: url('https://m-files.cdn1.cc/lpfile/6/7/f/67ffe5d2ef7cae5e3a69f4adb6f6c634/-/scale/x2/-/crop/0x0x900x880/-/resize/42/-/quality/100/f.png');
+            left: 20%;
+            bottom: 500px;
+        }
+
+        
+
+        .image2 {
+            background-image: url('https://m-files.cdn1.cc/lpfile/9/d/6/9d640a364b3eae814e298b1818ce164a/-/scale/x2/-/crop/0x0x981x984/-/resize/42/-/quality/100/f.png');
+            left: 40%;
+            bottom: 500px;
+        }
+
+        .image3 {
+            background-image: url('https://m-files.cdn1.cc/lpfile/8/6/d/86d70c02a51e5e86dde98ff3438a1bd9/-/scale/x2/-/crop/0x0x802x980/-/resize/38/-/quality/100/f.png');
+            left: 60%;
+            bottom: 500px;
+            display: block !important;
+            visibility: visible !important;
+            width: 50px;
+            height: 50px;
+        }
+
+
+        .image4 {
+            background-image: url('https://m-files.cdn1.cc/lpfile/7/8/1/7817aee779c0d8140cfd50b82b286b25/-/scale/x2/-/crop/0x0x860x768/-/resize/59/-/quality/100/f.png');
+            left: 80%;
+            bottom: 500px;
+            display: block !important;
+            visibility: visible !important;
+            width: 50px;
+            height: 50px;
+        }
+
+
+
+        .photo{
+          margin-top: -400px;
+          width: 600px;
+          height: 400px;
+
+          background-image: url('https://m-files.cdn1.cc/lpfile/9/9/1/9915b1ccbb8cfb27b79ce06f3969899f/-/scale/x2/-/crop/0x0x585x425/-/resize/366/-/quality/100/f.png');
+        }
+        .photo1 {
+          margin-left: 600px;
+          position: relative;
+    top: 100px; 
+    transform: rotate(10deg);
+          
+          width:200px;
+          height: 200px;
+          
+          background-image: url('https://m-files.cdn1.cc/lpfile/3/2/3/323a6625f322217116495f0910b249cb/-/crop/0x0x286x255/-/resize/206/-/quality/100/f.png');
+        }
+
+
+        .Gift h1 {
+          text-align: center;
+          margin-left: 700px;
+          margin-top: -400px;
+          text-transform: uppercase;
+          color: #456eb4;
+          font-weight: bold;
+          
+          font-size: 100px;
+          
+
+        }
+
+        .message {
+          text-align: center;
+          margin-left: 700px;
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 30px;
+
+        }
+    
+
+        .Gift1 {
+          width: 90px;
+          height: 90px;
+          margin-left: 900px;
+          background-image: url('https://m-files.cdn1.cc/lpfile/4/4/6/4467c77523174d60fa132ff424883535/-/scale/x2/-/crop/0x0x1000x1077/-/resize/43/-/quality/100/f.jpg');
+        }
+
+        .Gifi2  {
+          text-align: center;
+            margin-left: 700px;
+            margin-top: -90px;
+            line-height: 0.3;
+
+            font-size: 20px;
+
+
+            line-height: 30px;
+
+           }
+
+
+.buttons-container1 {
+    display: flex;
+    /* justify-content: flex-end; */ /* Закомментировать или удалить */
+    margin-top: 50px;
+}
+
+.buttons-container1 button {
+    padding: 20px 50px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    min-width: 250px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 1150px; /* или margin: 0px 0px 0px 200px; */
+}
+
+
+
+
+
+
+.Questions h1 {
+
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+
+}
+
+
+.faq-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.faq-item {
+    margin-bottom: 12px;
+    
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: #b0b0b0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+    padding: 20px 24px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    padding-right: 98px;
+    color: #1a1a1a;
+    
+}
+
+/* Убираем стандартный маркер */
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+/* Создаем свой маркер (+ / -) */
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    font-weight: 300;
+    color: #666;
+    transition: transform 0.3s ease;
+}
+
+details[open] .faq-question::after {
+    content: '−';
+}
+
+.faq-answer {
+    padding: 0 24px 84px 24px;
+    color: #4a4a4a;
+    line-height: 1.6;
+    border-top: 1px solid #f0f0f0;
+    margin-top: -4px;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+
+.maps {
+  background: linear-gradient(to right, #56ab2f,#a8e063);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+
+}
+
+h1  {
+  color: #f0f0f0;
+  font-size: 45px;
+  margin-bottom: 10px;
+  margin-top:-30px;
+
+
+
+}
+
+
+iframe {
+
+  width: 80vw;
+  height: 60vh;
+  filter: invert(100%);
+}
+
+
+.kartinka {
+
+   width: 100px;
+    height: 100px;
+    
+    
+    background-image: url('https://m-files.cdn1.cc/lpfile/e/7/9/e797f7c31b1bb93eefc58499a803611f/-/scale/x2/-/crop/0x0x1036x677/-/resize/125/-/quality/100/f.png');
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin-left: 100px;
+    
+}
+
+.Text {
+ margin-top: -10px !important; /* Отрицательное значение поднимает блок вверх */
+    position: relative;
+    z-index: 10;
+}
+
+
+.with-markers {
+    list-style-type: disc !important;
+    list-style-position: outside !important;
+    padding-left: 0px !important;
+    margin-left: 340px;
+    margin-top: -120px;
+    line-height: 1.1;
+    
+  }
+
+ 
+/* Смещаем dt вправо */
+        .with-markers dt {
+            margin-left: -20px;     /* отступ слева для термина */
+            font-weight: bold;
+            
+            
+        }
+
+
+.custom-list1 h1{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: #808080; /* Цвет маркера */
+  border-radius: 50%; /* Делаем круглым */
+  
+
+
+
+  
+}
+
+
+.email-container {
+    margin-left: 60px;
+    margin-top: -40px;
+    position: relative;
+    left: 920px;    /* Дополнительное смещение вправо */
+    top: -5px;
+}
+
+.custom-list  {
+  list-style: none; /* Убираем стандартные маркеры */
+  padding-left: 0;
+  margin-left: 900px;
+}
+
+
+
+.custom-list h1 {
+  color: #2b6ac9;
+}
+
+
+.custom-list li {
+  position: relative;
+  padding-left: 25px; /* Отступ для маркера */
+  margin-bottom: 10px;
+  margin-top: -90px;
+  
+}
+
+.custom-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: #808080; /* Цвет маркера */
+  border-radius: 50%; /* Делаем круглым */
+}
+
+
+
+.Message {
+    display: flex;
+    justify-content: flex-end; /* Это прижмет все дочерние элементы к правому краю */
+    gap: 10px; /* Отступ между иконками */
+    /* Если у блока есть фиксированная ширина или отступы, которые мешают, 
+       можно добавить padding, чтобы иконки не прилипали к самому краю */
+
+}
+
+
+
+p {
+    margin:6px 0px 0px 10px /* Прижмет текст к левому краю */
+    /* Или можно задать text-align: right если текст должен быть справа */
+}
+
+
+.phone-number {
+    color: #007bff;
+    margin-left: 900px;
+    margin-top: 10px;
+    font-size: 32px;
+}
+
+.email-icon {
+    margin-left: 900px;    /* Смещение вправо */
+    margin-top: -10px;     /* Смещение вверх (отрицательное значение) */
+    /* или используйте transform */
+
+
+
+
+}
+
+
+.address-list {
+    list-style-type: disc;  /* Круглые маркеры */
+    margin-left: 340px;
+    margin-top: -100px;
+    color: #333;
+}
+
+.address-list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.address-list strong {
+    font-weight: bold;
+    color: #000;
+}
+
+.copyright-text {
+    line-height: 1.8;  /* Относительный интервал */
+    display: block;     /* Занимает всю ширину и переносит текст */
+
+      line-height: 1.8;
+    display: block;
+    margin-bottom: -90px;
+    margin-right: 0;           /* Убираем отрицательное значение */
+    margin-left: -10px;/* Добавляет отступ снизу (если нужно) */
+
+}
+
+
+
+
+.zz {
+  transform: translateX(600px); /* Если нужно смещение вправо */
+    margin-top: 60px; /* Добавьте эту строку — сдвинет вниз */
+    display: inline-block;
+
+}
+
+.word-right {
+    transform: translateX(1100px); /* Если нужно смещение вправо */
+    margin-top: 60px; /* Добавьте эту строку — сдвинет вниз */
+    display: inline-block;
+
+}
+
+
+.color-demo {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px 40px;
+
+     margin-top:140px/* белый текст для темного фона */
+}
